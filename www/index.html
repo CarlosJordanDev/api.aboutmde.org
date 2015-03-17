@@ -397,6 +397,7 @@ curl_close($curl_handler);
                     This web-service is based on the original <a href="http://github.com/piwi/mde-service" title="See online http://github.com/piwi/mde-service">MDE-Service</a> PHP interface.
 You can find the sources of the service online at <a href="http://github.com/piwi/mde-service" title="See online http://github.com/piwi/mde-service">http://github.com/piwi/mde-service</a>.
 
+                    &dash; <a href="http://cheatsheet.aboutmde.org/markdown_reminders.html" onclick="return mdereminders_popup();" title="Markdown syntax reminders (new floated window)" target="_blank">Markdown syntax reminders</a>
                 </p>
             </div>
             <hr>
@@ -425,7 +426,7 @@ Original <em>MarkdownMark</em> icon made by <a href="http://github.com/dcurtis/m
 <script>
 var mdereminders_window; // use this variable to interact with the cheat sheet window
 function mdereminders_popup(url){
-    if (!url) url='http://reminders.aboutmde.org/popup.html';
+    if (!url) url='http://cheatsheet.aboutmde.org/markdown_reminders.html';
     if (url.lastIndexOf("popup")==-1) url += (url.lastIndexOf("?")!=-1) ? '&popup' : '?popup';
     mdereminders_window = window.open(url, 'markdown_reminders',
         'directories=0,menubar=0,status=0,location=0,scrollbars=1,resizable=1,fullscreen=0,width=840,height=380,left=120,top=120');
