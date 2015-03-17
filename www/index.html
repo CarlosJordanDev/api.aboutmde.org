@@ -10,7 +10,6 @@
 
 <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="vendor/fontawesome/css/font-awesome.min.css" rel="stylesheet">
-<link href="vendor/wow/css/libs/animate.css" rel="stylesheet">
 <style>
 html {
     position: relative;
@@ -74,7 +73,7 @@ body {
                         </ul>
                     </li>
                     <li>
-                        <a href="http://github.com/markdown-extended" title="http://github.com/markdown-extended"><i class="fa fa-github"></i></a>
+                        <a href="http://github.com/markdown-extended" title="http:&#x2F;&#x2F;github.com&#x2F;markdown-extended"><i class="fa fa-github"></i></a>
                     </li>
                 </ul>
             </div>
@@ -86,7 +85,7 @@ body {
 
 <div class="page-header" id="page-header">
     <h1>
-        <a href="http://api.aboutmde.org" title="**MDE** _<em>api</em>_"><img src="vendor/markdown-mark/66x40-solid.png" alt="[M↓]" /></a>&nbsp; **MDE** _<em>api</em>_
+        <a href="http://api.aboutmde.org" title="**MDE** _&lt;em&gt;api&lt;&#x2F;em&gt;_"><img src="vendor/markdown-mark/66x40-solid.png" alt="[M↓]" /></a>&nbsp; **MDE** _<em>api</em>_
         <br class="visible-xs"> <small><em>parse Markdown Extended online</em></small>
     </h1>
 </div>
@@ -101,7 +100,7 @@ body {
 <p>The <strong>MDE-Service</strong> webservice handles raw or JSON requests and send 
 a JSON content response with significant headers.</p>
 <p>The basic usage schema is:</p>
-<pre><code>$ curl -i http://localhost/mde-service/www/mde-api.php?source=%2AMarkdown%2A-__extended__%20content
+<pre><code class="lang-bash">$ curl -i http://api.aboutmde.org/mde-api.php?source=%2AMarkdown%2A-__extended__%20content
 
 HTTP/1.1 200 OK
 Last-Modified: Mon, 29 Dec 2014 21:11:01 GMT
@@ -116,7 +115,8 @@ ETag: 8a4d0bef2b45148a6c8df14158704f6c
     &quot;content&quot;:&quot;\n\n&lt;p&gt;&lt;em&gt;Markdown&lt;\/em&gt;-&lt;strong&gt;extended&lt;\/strong&gt; content&lt;\/p&gt;\n\n\n&quot;,
     &quot;errors&quot;:[]
 }
-</code></pre><p>This webservice is available online at <a href="http://api.aboutmde.org/">http://api.aboutmde.org/</a>.</p>
+</code></pre>
+<p>This webservice is available online at <a href="http://api.aboutmde.org/">http://api.aboutmde.org/</a>.</p>
 <h2 id="build-the-request">Build the request</h2>
 <p>You can send HTTP requests using verbs <em>GET</em>, <em>POST</em> or <em>HEAD</em>. The GET and POST
 requests will have the same results while the HEAD one will only fetch response headers.</p>
@@ -165,12 +165,13 @@ indexes are the same as for the <code>sources</code> elements.</li>
 <li><code>500 Internal Server Error</code> if an error occurred during the process.</li>
 </ul>
 <p>The default rendering of a parsed content is a full aggregation of its elements:</p>
-<pre><code>$mde_content-&gt;getMetadataToString()
+<pre><code class="lang-php">$mde_content-&gt;getMetadataToString()
 \n
 $mde_content-&gt;getBody()
 \n
 $mde_content-&gt;getNotesToString()
-</code></pre><p>Using the <code>extract</code> argument, you can choose a single element to return.</p>
+</code></pre>
+<p>Using the <code>extract</code> argument, you can choose a single element to return.</p>
 <p>When the sources came from one or more uploaded files, the filenames are rendered in the <code>sources</code> array
 with the same index as in the resulting <code>contents</code> array.</p>
 <h3 id="versions-information">Versions information</h3>
@@ -400,11 +401,10 @@ You can find the sources of the service online at <a href="http://github.com/piw
             </div>
             <hr>
             <div class="pull-left text-left">
-                <p class="text-muted small">
-                    This page is built with the help of <a href="http://jquery.com">jQuery</a>, <a href="http://getbootstrap.com">Bootstrap</a>, <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> and <a href="http://mynameismatthieu.com/WOW/">WOW</a>.
-                    <br class="hidden-xs hidden-sm">
-                    Original <em>MarkdownMark</em> icon made by <a href="http://github.com/dcurtis/markdown-mark">Dustin Curits</a>.
-                </p>
+                <p class="text-muted small">This page is built with the help of <a href="http://jquery.com">jQuery</a>, <a href="http://getbootstrap.com">Bootstrap</a> and <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>.
+<br class="hidden-xs hidden-sm">
+Original <em>MarkdownMark</em> icon made by <a href="http://github.com/dcurtis/markdown-mark">Dustin Curits</a>.
+</p>
             </div>
             <div class="pull-right text-right">
                 <p class="text-muted small">
@@ -412,7 +412,7 @@ You can find the sources of the service online at <a href="http://github.com/piw
                     &nbsp;-&nbsp;
                     <a href="#" id="website-mailto"></a>
                     <br class="hidden-xs hidden-sm">
-                    Original sources are available at <a href="http://github.com/markdown-extended">http://github.com/markdown-extended</a>.
+                    Original sources are available at <a href="http://github.com/markdown-extended">http:&#x2F;&#x2F;github.com&#x2F;markdown-extended</a>.
                 </p>
             </div>
         </div>
@@ -422,19 +422,16 @@ You can find the sources of the service online at <a href="http://github.com/piw
 
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="vendor/wow/dist/wow.min.js"></script>
 <script>
 var mdereminders_window; // use this variable to interact with the cheat sheet window
 function mdereminders_popup(url){
-    if (!url) url='http://reminders.aboutmde.org/index.html?popup';
+    if (!url) url='http://reminders.aboutmde.org/popup.html';
     if (url.lastIndexOf("popup")==-1) url += (url.lastIndexOf("?")!=-1) ? '&popup' : '?popup';
     mdereminders_window = window.open(url, 'markdown_reminders',
         'directories=0,menubar=0,status=0,location=0,scrollbars=1,resizable=1,fullscreen=0,width=840,height=380,left=120,top=120');
     mdereminders_window.focus();
     return false;
 }
-
-new WOW().init();
 
 $(function() {
     var website_email = 'info@aboutmde.org';
