@@ -1,5 +1,6 @@
 meta_title:         "MDE API"
 meta_description:   "A webservice tool to parse Markdown-Extended contents online "
+#meta_robots:        none
 
 # on the basic model: **Markdown** _extended_ (**<strong>MDE</strong>** _<em>dingus</em>_)
 page_title:         "**MDE** _<em>api</em>_"
