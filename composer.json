@@ -2,6 +2,6 @@
     "minimum-stability": "dev",
     "require": {
         "piwi/markdown-extended": "dev-master",
-        "piwi/mde-service": "dev-master"
+        "markdown-extended/mde-service": "dev-master"
     }
 }

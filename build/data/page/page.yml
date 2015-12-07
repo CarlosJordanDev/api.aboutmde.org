@@ -7,8 +7,8 @@ page_title:         "**MDE** _<em>api</em>_"
 page_link:          "http://api.aboutmde.org/"
 page_description:   "parse Markdown Extended online"
 page_footer:        |
-                This web-service is based on the original <a href="http://github.com/piwi/mde-service" title="See online http://github.com/piwi/mde-service">MDE-Service</a> PHP interface.
-                You can find the sources of the service online at <a href="http://github.com/piwi/mde-service" title="See online http://github.com/piwi/mde-service">http://github.com/piwi/mde-service</a>.
+                This web-service is based on the original <a href="http://github.com/markdown-extended/mde-service" title="See online http://github.com/markdown-extended/mde-service">MDE-Service</a> PHP interface.
+                You can find the sources of the service online at <a href="http://github.com/markdown-extended/mde-service" title="See online http://github.com/markdown-extended/mde-service">http://github.com/markdown-extended/mde-service</a>.
 
 # use this to change default website.logo
 #page_logo:          ...
